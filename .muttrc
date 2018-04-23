@@ -1,0 +1,25 @@
+# set imap_pass = ''
+# set smtp_pass = ''
+# set imap_user = '<user>@gmail.com'
+# set smtp_url = 'smtps://<user>@smtp.gmail.com'
+source ~/.muttcreds
+
+set folder = imaps://imap.gmail.com/
+set spoolfile = +INBOX
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+set smtp_authenticators = 'gssapi:login'
+set record=""
+set mbox="imaps://imap.gmail.com/[Gmail]/All Mail"
+set trash="imaps://imap.gmail.com/[Gmail]/Trash"
+bind editor <space> noop
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+bind index \Cu "previous-page"
+bind index \Cd "next-page"
+bind index gg first-entry
+bind index G last-entry

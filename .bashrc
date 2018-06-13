@@ -87,11 +87,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -129,20 +124,6 @@ hg_ps1() {
 export PS1='$(hg_ps1)\n\u at \h in \w\n$ '
 #export PS1='${debian_chroot:+($debian_chroot)}\u:\w\$'
 ### /hg prompt custom string
-
-### alias for dotfile config tracking
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-### /alias for dotfile config tracking
-
-alias python=python3
-
-### sql
-export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBR
-export PATH=/opt/oracle/instantclient_12_2:$PATH
-export ORACLE_HOME=/opt/oracle/instantclient_12_2
-TNS_ADMIN=~
-export TNS_ADMIN
-### /sql
 
 if [ -f ~/forte.sh ]; then
     source ~/forte.sh

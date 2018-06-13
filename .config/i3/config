@@ -183,17 +183,19 @@ exec --no-startup-id xautolock -time 5 -locker '~/.config/lock_screen.sh' &
 # exec --no-startup-id nm-applet
 exec --no-startup-id xmodmap ~/.Xmodmap
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
 # if a workspace is urgent, switch to it
 # for_window [urgent=latest] focus
 gaps inner 15
 gaps outer 20
 smart_gaps on
 smart_borders no_gaps
+# prevent losing focus of popups
+focus_follows_mouse no
 
 # Transparency
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/walls/fw-sunset.png
+exec --no-startup-id feh --bg-fill ~/Pictures/walls/soldeer.png
 # nm-applet for wifi icon
 exec --no-startup-id nm-applet &

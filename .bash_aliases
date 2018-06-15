@@ -8,6 +8,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ### /alias for dotfile config tracking
 
 alias pbcopy='xclip -sel clip'
+# get the count of incoming changes on the current branch
+alias hgin='hg in | grep "branch:\s\+$(hg branch)" | wc -l'
 
 ### sql
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBR

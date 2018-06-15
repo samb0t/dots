@@ -118,8 +118,9 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 # force a window on a named workspace
-assign [class=".*Chrome*."] 2
+assign [class=".*Chrome*."] 3
 assign [class="Slack"] 4
+assign [class="thunderbird"] 5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -178,7 +179,7 @@ bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 # Lock
 bindsym $mod+o exec i3lock -c 000000
 
-exec --no-startup-id xautolock -time 5 -locker '~/.config/lock_screen.sh' &
+exec --no-startup-id xautolock -time 5 -locker "~/.config/lock_screen.sh" &
 
 # exec --no-startup-id nm-applet
 exec --no-startup-id xmodmap ~/.Xmodmap

@@ -179,7 +179,7 @@ bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 # Lock
 bindsym $mod+o exec i3lock -c 000000
 
-exec --no-startup-id xautolock -time 5 -locker "~/.config/lock_screen.sh" &
+exec --no-startup-id xautolock -time 15 -locker "~/.config/lock_screen.sh" &
 
 # exec --no-startup-id nm-applet
 exec --no-startup-id xmodmap ~/.Xmodmap

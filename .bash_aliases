@@ -17,6 +17,7 @@ alias hglog=hglg
 alias hgup='hg up -r $(hglg | head -n 1 | sed "s#^.*\([0-9]*\):#\1#")'
 alias chrome=google-chrome
 alias xclip="xclip -selection c"
+export GIT_EDITOR=vim
 
 ### sql
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBR

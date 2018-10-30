@@ -17,6 +17,7 @@ alias hglog=hglg
 alias hgup='hg up -r $(hglg | head -n 1 | sed "s#^.*\([0-9]*\):#\1#")'
 alias chrome=google-chrome
 alias xclip="xclip -selection c"
+export GIT_EDITOR=vim
 
 ### keyboard
 alias keyboard-virt-core='xinput | grep "Virtual core keyboard" | sed -n "s/.*id=\([0-9]\+\).*/\1/p"'

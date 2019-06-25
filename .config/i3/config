@@ -185,8 +185,8 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 for_window [class="^.*"] border pixel 3
 # if a workspace is urgent, switch to it
 # for_window [urgent=latest] focus
-gaps inner 15
-gaps outer 20
+gaps inner 10
+gaps outer 10
 smart_gaps on
 smart_borders no_gaps
 # prevent losing focus of popups

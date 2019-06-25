@@ -15,6 +15,7 @@ alias hglg='hg glog -l 10 -b $(hg branch)'
 alias hglog=hglg
 # update to the tip of the current branch
 alias hgup='hg up -r $(hglg | head -n 1 | sed "s#^.*\([0-9]*\):#\1#")'
+alias gdiff='git diff --ignore-space-at-eol -b -w --ignore-blank-lines'
 alias chrome=google-chrome
 alias xclip="xclip -selection c"
 export GIT_EDITOR=vim
@@ -66,5 +67,11 @@ stty -ixon
 
 alias taskman='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 
+#Monitors
+xrandr --output eDP-1 --brightness 0.8
+brightness () {
+    xrandr --output eDP-1 --brightness $1
+}
+#/Monitors
 
 

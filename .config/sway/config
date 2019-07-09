@@ -106,10 +106,10 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     bindsym $mod+Right focus right
 
     # _move_ the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move workspace to output left
-    bindsym $mod+Shift+$down move workspace to output down
-    bindsym $mod+Shift+$up move workspace to output up
-    bindsym $mod+Shift+$right move workspace to output right
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
     # ditto, with arrow keys
     bindsym $mod+Shift+Left move workspace to output left
     bindsym $mod+Shift+Down move workspace to output down

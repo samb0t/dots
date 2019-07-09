@@ -51,6 +51,8 @@ export PATH
 export ORACLE_HOME=$HOME/.oracle/network/admin
 TNS_ADMIN=~
 export TNS_ADMIN
+# This fixes Intellij in Sway
+export _JAVA_AWT_WM_NONREPARENTING=1
 ### /sql
 
 BROWSER=google-chrome
@@ -68,10 +70,9 @@ stty -ixon
 alias taskman='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 
 #Monitors
-xrandr --output eDP-1 --brightness 0.8
+# xrandr --output eDP-1 --brightness 0.8 # This won't work in wayland
 brightness () {
     xrandr --output eDP-1 --brightness $1
 }
 #/Monitors
-
 

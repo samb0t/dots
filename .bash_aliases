@@ -27,13 +27,17 @@ alias keyboard-count='xinput | grep -c "slave  keyboard"'
 
 # Make sure you have an alternate keyboard attached!
 function togglek() {
-    if  xinput | grep -q "Translated.*floating slave"; then
-        xinput reattach $(keyboard-builtin) $(keyboard-virt-core)
+    if [ $(loginctl show-session 2 -p Type) == *"wayland"*]; then
+        swaymsg 'input 1:1:AT_Translated_Set_2_keyboard events toggle'
     else
-        if [ $(keyboard-count) -gt 8 ]; then
-            xinput float $(keyboard-builtin)
+        if  xinput | grep -q "Translated.*floating slave"; then
+            xinput reattach $(keyboard-builtin) $(keyboard-virt-core)
         else
-            echo "Why would you float the only available keyboard?"
+            if [ $(keyboard-count) -gt 8 ]; then
+                xinput float $(keyboard-builtin)
+            else
+                echo "Why would you float the only available keyboard?"
+            fi
         fi
     fi
 }
@@ -75,4 +79,8 @@ brightness () {
     xrandr --output eDP-1 --brightness $1
 }
 #/Monitors
+
+#Wayland
+alias screenshot='grim -g "$(slurp)" ~/Pictures/$(date +"%m-%d-%y-%H-%M-%S.png")'
+#/Wayland
 

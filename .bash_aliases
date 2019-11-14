@@ -46,6 +46,11 @@ alias dock='~/.screenlayout/ft.sh && togglek'
 alias undock='~/.screenlayout/mono.sh && togglek'
 ### /keyboard
 
+### Spawn in thread
+function task() {
+    eval "$*" > /dev/null 2>&1 & disown
+}
+### /Spawn in thread
 
 ### sql
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBR
@@ -83,4 +88,3 @@ brightness () {
 #Wayland
 alias screenshot='grim -g "$(slurp)" ~/Pictures/$(date +"%m-%d-%y-%H-%M-%S.png")'
 #/Wayland
-

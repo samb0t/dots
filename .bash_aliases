@@ -52,6 +52,15 @@ function task() {
 }
 ### /Spawn in thread
 
+### Files
+function find-file() {
+    find ./ -name "$1" -type f
+}
+function find-dir() {
+    find ./ -name "$1" -type d
+}
+### /Files
+
 ### sql
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBR
 PATH=/opt/oracle/instantclient_12_2:$PATH

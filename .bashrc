@@ -128,3 +128,7 @@ export PS1='$(hg_ps1)\n\u at \h in \w\n$ '
 if [ -f ~/forte.sh ]; then
     source ~/forte.sh
 fi
+export http_proxy=''
+export https_proxy=''
+export ftp_proxy=''
+export socks_proxy=''

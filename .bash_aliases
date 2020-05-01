@@ -59,11 +59,12 @@ function find-file() {
 function find-dir() {
     find ./ -name "$1" -type d
 }
+alias unzip-recursive='find . -name "*.zip" | while read filename; do unzip -o -d "`dirname "$filename"`" "$filename"; done;'
 ### /Files
 
 ### sql
-export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBR
-PATH=/opt/oracle/instantclient_12_2:$PATH
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_19_6:$LD_LIBR
+PATH=/opt/oracle/instantclient_19_6:$PATH
 PATH=$HOME/bin:$PATH
 export PATH
 export ORACLE_HOME=$HOME/.oracle/network/admin
@@ -97,3 +98,4 @@ brightness () {
 #Wayland
 alias screenshot='grim -g "$(slurp)" ~/Pictures/$(date +"%m-%d-%y-%H-%M-%S.png")'
 #/Wayland
+

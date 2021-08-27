@@ -19,6 +19,11 @@ config config --local status.showUntrackedFiles no
 ```
 sudo apt install vim-gtk3
 git clone --recurse-submodules https://github.com/samb0t/vimfiles.git .vim
+sudo apt install rg
+sudo apt install fdfind
+sudo apt install ctags
+cd <some project dir>
+ctags -R
 ```
 - Install/configure the fonts in the `extras` directory
 

@@ -61,7 +61,6 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   mercurial
-  zsh_reload
   vi-mode
   colored-man-pages
 )

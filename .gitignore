@@ -1,2 +1,4 @@
 .cfg
 tags
+.DS_Store
+.dsp_cache

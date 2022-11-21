@@ -8,14 +8,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ### /alias for dotfile config tracking
 
 alias pbcopy='xclip -sel clip'
-# get the count of incoming changes on the current branch
-alias hgin='hg in | grep "branch:\s\+$(hg branch)" | wc -l'
-# get a recent log for the current branch
-alias hglg='hg glog -l 10 -b $(hg branch)'
-alias hglog=hglg
-# update to the tip of the current branch
-alias hgup='hg up -r $(hglg | head -n 1 | sed "s#^.*\([0-9]*\):#\1#")'
 alias gdiff='git diff --ignore-space-at-eol -b -w --ignore-blank-lines'
+alias ghauth='gh auth login'
 alias chrome=google-chrome
 alias xclip="xclip -selection c"
 export GIT_EDITOR=vim
@@ -63,8 +57,8 @@ alias unzip-recursive='find . -name "*.zip" | while read filename; do unzip -o -
 ### /Files
 
 ### sql
-export LD_LIBRARY_PATH=/opt/oracle/instantclient_19_6:$LD_LIBR
-PATH=/opt/oracle/instantclient_19_6:$PATH
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_7:$LD_LIBR
+PATH=/opt/oracle/instantclient_21_7:$PATH
 PATH=$HOME/bin:$PATH
 PATH=/opt/idea-IU-212.4746.92/bin:$PATH
 export PATH

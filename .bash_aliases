@@ -60,7 +60,7 @@ alias unzip-recursive='find . -name "*.zip" | while read filename; do unzip -o -
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_7:$LD_LIBR
 PATH=/opt/oracle/instantclient_21_7:$PATH
 PATH=$HOME/bin:$PATH
-PATH=/opt/idea-IU-212.4746.92/bin:$PATH
+PATH=/opt/idea-IU-223.8214.52/bin:$PATH 
 export PATH
 export ORACLE_HOME=$HOME/.oracle/network/admin
 TNS_ADMIN=~

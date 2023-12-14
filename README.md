@@ -6,6 +6,7 @@ At minimum:
 
 ```
 sudo apt install git
+git config --global core.excludesFile '~/.gitignore'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 echo ".cfg" >> .gitignore
 git clone --bare https://github.com/samb0t/dots.git $HOME/.cfg
@@ -19,9 +20,9 @@ config config --local status.showUntrackedFiles no
 ```
 sudo apt install vim-gtk3
 git clone --recurse-submodules https://github.com/samb0t/vimfiles.git .vim
-sudo apt install rg
-sudo apt install fdfind
-sudo apt install ctags
+sudo apt install ripgrep
+sudo apt install fd-find
+sudo apt install universal-ctags
 cd <some project dir> ctags -R
 ```
 - Install/configure the fonts in the `extras` directory

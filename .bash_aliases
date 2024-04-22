@@ -61,6 +61,7 @@ export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_7:$LD_LIBR
 PATH=/opt/oracle/instantclient_21_7:$PATH
 PATH=$HOME/bin:$PATH
 PATH=/opt/idea-IU-223.8214.52/bin:$PATH 
+PATH=$HOME/.local/bin:$PATH
 export PATH
 export ORACLE_HOME=$HOME/.oracle/network/admin
 TNS_ADMIN=~

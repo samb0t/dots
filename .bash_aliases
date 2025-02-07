@@ -62,12 +62,15 @@ PATH=/opt/oracle/instantclient_21_7:$PATH
 PATH=$HOME/bin:$PATH
 PATH=/opt/idea-IU-223.8214.52/bin:$PATH 
 PATH=$HOME/.local/bin:$PATH
+PATH=/opt/homebrew/bin:$PATH
 export PATH
 export ORACLE_HOME=$HOME/.oracle/network/admin
 TNS_ADMIN=~
 export TNS_ADMIN
 # This fixes Intellij in Sway
 export _JAVA_AWT_WM_NONREPARENTING=1
+JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+export JAVA_HOME
 ### /sql
 
 BROWSER=google-chrome

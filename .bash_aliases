@@ -69,7 +69,7 @@ TNS_ADMIN=~
 export TNS_ADMIN
 # This fixes Intellij in Sway
 export _JAVA_AWT_WM_NONREPARENTING=1
-JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
 ### /sql
 

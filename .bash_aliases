@@ -63,6 +63,7 @@ PATH=$HOME/bin:$PATH
 PATH=/opt/idea-IU-223.8214.52/bin:$PATH 
 PATH=$HOME/.local/bin:$PATH
 PATH=/opt/homebrew/bin:$PATH
+PATH=/opt/apache-maven-3.9.9/bin:$PATH
 export PATH
 export ORACLE_HOME=$HOME/.oracle/network/admin
 TNS_ADMIN=~

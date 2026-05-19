@@ -119,4 +119,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Created by `pipx` on 2025-05-07 14:43:08
-export PATH="$PATH:/Users/sam.bottoni/Library/Python/3.9/bin"
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+export PATH="$PATH:/opt/homebrew/Caskroom/sqlcl/26.1.2.132.1334/sqlcl/bin"
+
+# Unset incorrect ORACLE_HOME if it exists (fixes SQLcl)
+if [ "$ORACLE_HOME" = "$HOME/.oracle/network/admin" ]; then
+  unset ORACLE_HOME
+fi
+
+# Oracle TNS configuration
+export TNS_ADMIN="$HOME/.oracle/network/admin"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"

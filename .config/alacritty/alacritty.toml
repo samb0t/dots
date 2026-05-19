@@ -2,7 +2,7 @@
 startup_mode = "Maximized"
 decorations = "Buttonless"
 padding = { x = 10, y = 10 }
-opacity = 0.9
+opacity = 0.99
 
 [font]
 size = 16.0
@@ -34,3 +34,18 @@ blue    = '#839496'
 magenta = '#6c71c4'
 cyan    = '#93a1a1'
 white   = '#fdf6e3'
+
+[[keyboard.bindings]]
+key = "I"
+mods = "Control | Shift"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "O"
+mods = "Control | Shift"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "0"
+mods = "Control"
+action = "ResetFontSize"
